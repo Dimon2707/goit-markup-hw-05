@@ -534,9 +534,12 @@ margin-bottom: 50px;
     color: var(--logo-color-footer);
 }
 
+.adress{
+    margin-right: 70px;
+}
+
 address {
     margin-top: 20px;
-    margin-right: 70px;
 }
 
 .footer p{
