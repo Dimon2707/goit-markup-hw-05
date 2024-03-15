@@ -23,7 +23,7 @@
         </a>
         <nav class="navigation">
           <ul class="nav-list">
-            <li class="item">
+            <li class="item current">
               <a class="link current" href="./index.html">Студія</a>
             </li>
             <li class="item">
@@ -62,9 +62,7 @@
         <h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
         <button type="button" class="hero-btn">Замовити послугу</button>
         <div class="backdrop is-hidden">
-          <div class="modal">
-
-          </div>
+          <div class="modal"></div>
         </div>
       </section>
 
@@ -127,31 +125,46 @@
           <h2 class="direction-title">Чим ми займаємося</h2>
           <ul class="direction-list">
             <li class="item">
-              <img
-                class="direction-img"
-                src="./images/img-1.jpg"
-                alt="coding"
-                width="370"
-                height="294"
-              />
+              <div class="box">
+                <img
+                  class="direction-img"
+                  src="./images/img-1.jpg"
+                  alt="coding"
+                  width="370"
+                  height="294"
+                />
+                <div class="label">
+                  <p class="direction-descr">Десктопні додатки</p>
+                </div>
+              </div>
             </li>
             <li class="item">
-              <img
-                class="direction-img"
-                src="./images/img-2.jpg"
-                alt="development"
-                width="370"
-                height="294"
-              />
+              <div class="box">
+                <img
+                  class="direction-img"
+                  src="./images/img-2.jpg"
+                  alt="development"
+                  width="370"
+                  height="294"
+                />
+                <div class="label">
+                  <p class="direction-descr">Мобільні додатки</p>
+                </div>
+              </div>
             </li>
             <li class="item">
-              <img
-                class="direction-img"
-                src="./images/img-3.jpg"
-                alt="visualization"
-                width="370"
-                height="294"
-              />
+              <div class="box">
+                <img
+                  class="direction-img"
+                  src="./images/img-3.jpg"
+                  alt="visualization"
+                  width="370"
+                  height="294"
+                />
+                <div class="label">
+                  <p class="direction-descr">Дизайнерські рішення</p>
+                </div>
+              </div>
             </li>
           </ul>
         </div>
@@ -387,11 +400,10 @@
     </main>
     <footer class="footer">
       <div class="container">
-    
         <div class="adress">
           <a href="./index.html" class="footer-logo"
-          >Web<span class="footer-accent">Studio</span>
-           </a>
+            >Web<span class="footer-accent">Studio</span>
+          </a>
           <address>
             <p>м. Київ, пр-т Лесі Українки, 26</p>
             <a href="mailto:info@devstudio.com" class="footer-mail"
