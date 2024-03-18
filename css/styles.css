@@ -17,6 +17,8 @@ body {
     --logo-color: #000;
     --logo-color-footer: #FFFFFF;
     --icon-color: #afb1b8;
+    --portfolio-overlay: rgba(33, 150, 243, 0.9);
+    --portfolio-hover-focus: 1px 4px 6px 0 rgba(0, 0, 0, 0.16), 0 4px 4px 0 rgba(0, 0, 0, 0.06), 0 1px 1px 0 rgba(0, 0, 0, 0.12);
 }
 
 h1,h2,h3,h4,h5,h6,p {
@@ -735,6 +737,7 @@ address {
     flex-wrap: wrap;
     margin-bottom: 50px;
 }
+
 .filters-list .item {
     min-width: 67px;
     height: 38px;
@@ -762,6 +765,7 @@ address {
     padding: 6px 22px;
     cursor: pointer;
 }
+
 .btn:hover,
 .btn:focus {
     background-color: var(--accent-color);
@@ -795,12 +799,19 @@ address {
 
 .item-card:hover,
 .item-card:focus {
-    box-shadow: 1px 4px 6px 0 rgba(0, 0, 0, 0.16), 0 4px 4px 0 rgba(0, 0, 0, 0.06), 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: var(--portfolio-hover-focus);
+}
+
+.item-card:hover .content-img::before {
+    opacity: 1;
+}
+
+.item-card:hover .text-img {
+    opacity: 1;
 }
 
 .content {
     padding: 20px 24px;
-
     border: 1px solid #eee;
     border-top: 0;
 }
@@ -819,4 +830,36 @@ address {
     line-height: 1.875;
     letter-spacing: 0.03em;
     color: var(--secondary-text-color);
+}
+
+.content-img {
+    position: relative;
+}
+
+.content-img::before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--portfolio-overlay);
+    opacity: 0;
+}
+
+.text-img {
+    display: block;
+    position: absolute;
+    top: 63px;
+    left: 24px;
+
+    opacity: 0;
+}
+
+.descr-img {
+    font-size: 18px;
+    line-height: 156%;
+    letter-spacing: 0.03em;
+    color: var(--white-color);
+
+    max-width: 322px;
 }
